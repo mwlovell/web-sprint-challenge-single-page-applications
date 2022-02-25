@@ -22,9 +22,15 @@ const initialFormValues = {
   ///// RADIO BUTTONS /////
   civil: '',
   ///// CHECKBOXES /////
-  hiking: false,
-  reading: false,
-  coding: false,
+ 
+
+  pepperoni: false,
+  sausage: false,
+  bacon: false,
+  olives: false,
+  onions: false,
+  peppers: false,
+
 }
 const initialFormErrors = {
   name: '',

@@ -22,7 +22,7 @@ export default function PizzaForm(props) {
         change(name, trueValue);
       }
       return (
-        <form className='form container' onSubmit={onSubmit}>
+        <form className='pizza-form' onSubmit={onSubmit}>
           <div className='form-group submit'>
             <h2>Add a Pie</h2>
     
@@ -109,29 +109,53 @@ export default function PizzaForm(props) {
             {/* ////////// CHECKBOXES ////////// */}
             {/* ////////// CHECKBOXES ////////// */}
             {/* ////////// CHECKBOXES ////////// */}
-            <label>Hiking
+            <label>Pepperoni
               <input
                 type="checkbox"
-                name="hiking"
-                checked={values.hiking}
+                name="pepperoni"
+                checked={values.pepperoni}
                 onChange={onChange}
               />
             </label>
     
-            <label>Reading
+            <label>Sausage
               <input
                 type="checkbox"
-                name="reading"
-                checked={values.reading}
+                name="sausage"
+                checked={values.sausage}
                 onChange={onChange}
               />
             </label>
     
-            <label>Coding
+            <label>Bacon
               <input
                 type="checkbox"
-                name="coding"
-                checked={values.coding}
+                name="bacon"
+                checked={values.bacon}
+                onChange={onChange}
+              />
+            </label>
+            <label>Olives
+              <input
+                type="checkbox"
+                name="olives"
+                checked={values.olives}
+                onChange={onChange}
+              />
+            </label>
+            <label>Onions
+              <input
+                type="checkbox"
+                name="onions"
+                checked={values.onions}
+                onChange={onChange}
+              />
+            </label>
+            <label>Peppers
+              <input
+                type="checkbox"
+                name="peppers"
+                checked={values.peppers}
                 onChange={onChange}
               />
             </label>

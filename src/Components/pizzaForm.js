@@ -30,7 +30,7 @@ export default function PizzaForm(props) {
   }
 
   return (
-    <form className='form container' onSubmit={onSubmit}>
+    <form className='pizza-form' onSubmit={onSubmit}>
       <div className='form-group submit'>
         <h2>Add a pie</h2>
 
@@ -171,5 +171,4 @@ export default function PizzaForm(props) {
     </form>
   )
 }
-
 
