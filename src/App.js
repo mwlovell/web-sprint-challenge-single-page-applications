@@ -20,7 +20,7 @@ const initialFormValues = {
   ///// DROPDOWN /////
   crust: '',
   ///// RADIO BUTTONS /////
-  civil: '',
+  crust: '',
   ///// CHECKBOXES /////
  
 
@@ -36,7 +36,7 @@ const initialFormErrors = {
   name: '',
   email: '',
   crust: '',
-  civil: '',
+  crust: '',
 }
 const initialPizzas = []
 const initialDisabled = true
@@ -81,7 +81,7 @@ export default function App() {
       name: formValues.name.trim(),
       email: formValues.email.trim(),
       crust: formValues.crust.trim(),
-      civil: formValues.civil.trim(),
+      crust: formValues.crust.trim(),
       // 🔥 STEP 7- WHAT ABOUT HOBBIES?
     }
     // 🔥 STEP 8- POST NEW FRIEND USING HELPER

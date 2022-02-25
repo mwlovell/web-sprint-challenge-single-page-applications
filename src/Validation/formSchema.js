@@ -12,10 +12,10 @@ const formSchema = yup.object().shape({
     .required('Email is required ya chump'),
   role: yup
     .string()
-    .oneOf(['instructor', 'student', 'alumni'], 'Role is required COME ON!!!'),
-  civil: yup
+    .oneOf(['small', 'medium', 'large'], 'size is required COME ON!!!'),
+  crust: yup
     .string()
-    .oneOf(['traditional', 'gluten free'], 'Gotta be either married or single, bud.'),
+    .oneOf(['traditional', 'gluten free'], 'Gotta be either traditional or single free, bud.'),
   coding: yup.boolean(),
   reading: yup.boolean(),
   hiking: yup.boolean()

@@ -42,7 +42,7 @@ export default function PizzaForm(props) {
           <div>{errors.name}</div>
           <div>{errors.email}</div>
           <div>{errors.size}</div>
-          <div>{errors.civil}</div>
+          <div>{errors.crust}</div>
         </div>
       </div>
 
@@ -52,7 +52,7 @@ export default function PizzaForm(props) {
         {/* ////////// TEXT INPUTS ////////// */}
         {/* ////////// TEXT INPUTS ////////// */}
         {/* ////////// TEXT INPUTS ////////// */}
-        <label>Name&nbsp;
+        <label id='name-input'>Name&nbsp;
           <input
             value={values.name}
             onChange={onChange}
@@ -73,7 +73,7 @@ export default function PizzaForm(props) {
         {/* ////////// DROPDOWN ////////// */}
         {/* ////////// DROPDOWN ////////// */}
         {/* ////////// DROPDOWN ////////// */}
-        <label>Size
+        <label id='size-dropdown'>Size
           <select
             onChange={onChange}
             value={values.crust}
@@ -92,7 +92,7 @@ export default function PizzaForm(props) {
         <label>Traditional
           <input
             type='radio'
-            name='civil'
+            name='crust'
             value='traditional'
             onChange={onChange}
             checked={values.civil === 'traditional'}
@@ -102,10 +102,10 @@ export default function PizzaForm(props) {
         <label>Gluten Free
           <input
             type='radio'
-            name='civil'
+            name='crust'
             value='glutenfree'
             onChange={onChange}
-            checked={values.civil === 'glutenfree'}
+            checked={values.crust === 'glutenfree'}
           />
         </label>
       </div>

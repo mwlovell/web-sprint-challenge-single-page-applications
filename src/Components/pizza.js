@@ -34,7 +34,7 @@ export default function PizzaForm(props) {
               <div>{errors.name}</div>
               <div>{errors.email}</div>
               <div>{errors.size}</div>
-              <div>{errors.civil}</div>
+              <div>{errors.crust}</div>
             </div>
           </div>
     
@@ -85,20 +85,20 @@ export default function PizzaForm(props) {
             <label>Traditional
               <input
                 type="radio"
-                name="civil"
+                name="crust"
                 value="traditional"
                 onChange={onChange}
-                checked={values.civil === "traditional"}
+                checked={values.crust === "traditional"}
               />
             </label>
     
             <label>No Gluten
               <input
                 type="radio"
-                name="civil"
+                name="crust"
                 value="nogluten"
                 onChange={onChange}
-                checked={values.civil === "nogluten"}
+                checked={values.crust === "nogluten"}
               />
             </label>
           </div>
