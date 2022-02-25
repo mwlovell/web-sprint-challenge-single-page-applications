@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -35,7 +36,10 @@ export default function PizzaForm(props) {
         <h2>Add a pie</h2>
 
         {/* 🔥 DISABLE THE BUTTON */}
-        <button id='order-pizza' disabled={disabled}>submit</button>
+        <Link to="/pizza"> <button id='order-pizza' disabled={disabled}>submit order</button></Link>
+
+        
+   
 
         <div className='errors'>
           {/* 🔥 RENDER THE VALIDATION ERRORS HERE */}

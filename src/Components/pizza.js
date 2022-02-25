@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+
+
 
 export default function PizzaForm(props) {
     const {
@@ -8,7 +12,7 @@ export default function PizzaForm(props) {
       disabled,
       errors,
     } = props
-
+   
     const onSubmit = evt => {
         evt.preventDefault()
         submit()
@@ -27,7 +31,12 @@ export default function PizzaForm(props) {
             <h2>Add a Pie</h2>
     
             {/* 🔥 DISABLE THE BUTTON */}
-            <button>submit</button>
+           
+            <Link to="/pizza">
+         <button type="button">
+          submit order
+        </button>
+         </Link>
     
             <div className='errors'>
               {/* 🔥 RENDER THE VALIDATION ERRORS HERE */}

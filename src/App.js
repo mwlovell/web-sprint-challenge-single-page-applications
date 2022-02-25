@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Pizza from './Components/pizza'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PizzaForm from './Components/pizzaForm'
+
 // 🔥 STEP 1- CHECK THE ENDPOINTS IN THE README
 // 🔥 STEP 2- FLESH OUT FriendForm.js
 // 🔥 STEP 3- FLESH THE SCHEMA IN ITS OWN FILE
@@ -9,6 +10,8 @@ import PizzaForm from './Components/pizzaForm'
 import axios from 'axios';
 // import * as yup from 'yup';
 // import schema from '../validation/formSchema';
+import {  Route } from 'react-router-dom'
+import { Home } from './components/pizza'
 
 //////////////// INITIAL STATES ////////////////
 //////////////// INITIAL STATES ////////////////
@@ -104,19 +107,22 @@ export default function App() {
     <div className='container'>
       <header>
         <h1>Pizza App</h1>
-        {/* <Link to="/">Home</Link> */}
-      </header>
-      
         
-       
-      <PizzaForm
+        <Route path="/"> <PizzaForm
         values={formValues}
         change={inputChange}
         submit={formSubmit}
         disabled={disabled}
         errors={formErrors}
       />
+</Route>
 
+       
+      </header>
+      
+        
+       
+      
       {
         pizzas.map(pizza => {
           return (
