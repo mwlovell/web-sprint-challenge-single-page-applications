@@ -4,7 +4,7 @@ const formSchema = yup.object().shape({
   name: yup
     .string()
     .trim()
-    .required('Name is required ya chump!')
+    .required("name must be at least 2 characters")
     .min(2, "name must be at least 2 characters"),
   email: yup
     .string()
@@ -16,9 +16,12 @@ const formSchema = yup.object().shape({
   crust: yup
     .string()
     .oneOf(['traditional', 'gluten free'], 'Gotta be either traditional or single free, bud.'),
-  coding: yup.boolean(),
-  reading: yup.boolean(),
-  hiking: yup.boolean()
+  pepperoni: yup.boolean(),
+  sausage: yup.boolean(),
+  bacon: yup.boolean()
+  olives: yup.boolean(),
+  onions: yup.boolean(),
+  peppers: yup.boolean()
 })
 
 export default formSchema;
