@@ -43,6 +43,7 @@ export default function PizzaForm(props) {
           <div>{errors.email}</div>
           <div>{errors.size}</div>
           <div>{errors.crust}</div>
+          <div>{errors.instructions}</div>
         </div>
       </div>
 
@@ -76,7 +77,7 @@ export default function PizzaForm(props) {
         <label id='size-dropdown'>Size
           <select
             onChange={onChange}
-            value={values.crust}
+            value={values.size}
             name='size'
           >
             <option value=''>- Select an option -</option>
@@ -95,7 +96,7 @@ export default function PizzaForm(props) {
             name='crust'
             value='traditional'
             onChange={onChange}
-            checked={values.civil === 'traditional'}
+            checked={values.crust === 'traditional'}
           />
         </label>
 
@@ -166,6 +167,15 @@ export default function PizzaForm(props) {
             onChange={onChange}
           />
         </label>
+        <label id='special-text'>Instructions
+              <input
+                value={values.instructions}
+                onChange={onChange}
+                name='instructions'
+                type='text'
+                placeholder='special text'
+              />
+            </label>
         
       </div>
     </form>

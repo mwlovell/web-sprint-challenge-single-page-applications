@@ -35,6 +35,7 @@ export default function PizzaForm(props) {
               <div>{errors.email}</div>
               <div>{errors.size}</div>
               <div>{errors.crust}</div>
+              <div>{errors.instructions}</div>
             </div>
           </div>
     
@@ -159,6 +160,22 @@ export default function PizzaForm(props) {
                 onChange={onChange}
               />
             </label>
+            <label id='special-text'>Instructions
+              <input
+                value={values.instructions}
+                onChange={onChange}
+                name='instructions'
+                type='text'
+                placeholder='special text'
+              />
+            </label>
+            {/* <label>name&nbsp;
+              <input
+                value={values.name}
+                onChange={onChange}
+                name='name'
+                type='text'
+              /> */}
           </div>
         </form>
       )

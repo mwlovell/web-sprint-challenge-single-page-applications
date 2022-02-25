@@ -6,6 +6,8 @@ const formSchema = yup.object().shape({
     .trim()
     .required("name must be at least 2 characters")
     .min(2, "name must be at least 2 characters"),
+    // retry until we find 3 matching <li.selected>
+
   email: yup
     .string()
     .email('Must be a valid email address ya chump!')
@@ -18,7 +20,7 @@ const formSchema = yup.object().shape({
     .oneOf(['traditional', 'gluten free'], 'Gotta be either traditional or single free, bud.'),
   pepperoni: yup.boolean(),
   sausage: yup.boolean(),
-  bacon: yup.boolean()
+  bacon: yup.boolean(),
   olives: yup.boolean(),
   onions: yup.boolean(),
   peppers: yup.boolean()
