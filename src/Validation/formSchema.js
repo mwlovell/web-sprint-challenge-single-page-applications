@@ -1,11 +1,13 @@
 import * as yup from 'yup';
+// import formSchema from '../validation/formSchema';
 
 const formSchema = yup.object().shape({
   name: yup
     .string()
     .trim()
-    .min(2, "name must be at least 2 characters")
-    .required("name must be at least 2 characters"),
+    .required("name must be at least 2 characters")
+    .min(2, "name must be at least 2 characters"),
+    
     // retry until we find 3 matching <li.selected>
 
   email: yup

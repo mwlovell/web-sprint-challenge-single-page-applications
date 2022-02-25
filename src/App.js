@@ -9,9 +9,9 @@ import PizzaForm from './Components/pizzaForm'
 // 🔥 STEP 4- IMPORT THE SCHEMA, AXIOS AND YUP
 import axios from 'axios';
 // import * as yup from 'yup';
-// import schema from '../validation/formSchema';
+// import formSchema from '../validation/formSchema';
 import {  Route } from 'react-router-dom'
-import { Home } from './components/pizza'
+// import { Home } from './components/pizza'
 
 //////////////// INITIAL STATES ////////////////
 //////////////// INITIAL STATES ////////////////
