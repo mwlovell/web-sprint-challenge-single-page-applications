@@ -18,16 +18,18 @@ export default function PizzaForm(props) {
    * const change = props.change
    */
 
-  const onSubmit = evt => {
-    evt.preventDefault()
-    submit()
-  }
+  
 
   const onChange = evt => {
     /* 🔥 FIX THIS SO IT ALSO WORKS WITH CHECKBOXES */
     const { name, value, type, checked } = evt.target
     const valueToUse = type === 'checkbox' ? checked : value;
     change(name, valueToUse);
+    
+  }
+  const onSubmit = evt => {
+    evt.preventDefault()
+    submit()
   }
 
   return (
@@ -71,7 +73,7 @@ export default function PizzaForm(props) {
             value={values.email}
             onChange={onChange}
             name='email'
-            type='text'
+            type='email    '
           />
         </label>
 
@@ -84,7 +86,7 @@ export default function PizzaForm(props) {
             value={values.size}
             name='size'
           >
-            <option value=''>- Select an option -</option>
+            <option value=''>-- Select an option --</option>
             <option value='small'>Small</option>
             <option value='medium'>Medium</option>
             <option value='large'>Large</option>

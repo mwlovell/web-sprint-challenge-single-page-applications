@@ -1,25 +1,34 @@
 import * as yup from 'yup';
-// import formSchema from '../validation/formSchema';
+
 
 const formSchema = yup.object().shape({
   name: yup
     .string()
-    .trim()
+    .trim() 
     .required("name must be at least 2 characters")
     .min(2, "name must be at least 2 characters"),
     
-    // retry until we find 3 matching <li.selected>
+    size: yup
+      .string()
+      .oneOf(['small', 'medium', 'large']),
 
   email: yup
     .string()
-    .email('Must be a valid email address ya chump!')
-    .required('Email is required ya chump'),
+    .required("name must be at least 2 characters")
+    .min(2, "name must be at least 2 characters"),
   role: yup
     .string()
+    .required()
     .oneOf(['small', 'medium', 'large'], 'size is required COME ON!!!'),
   crust: yup
     .string()
+    
     .oneOf(['traditional', 'gluten free'], 'Gotta be either traditional or single free, bud.'),
+   
+  instructions: yup
+  .string(),
+  
+
   pepperoni: yup.boolean(),
   sausage: yup.boolean(),
   bacon: yup.boolean(),

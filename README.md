@@ -35,10 +35,11 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
-
+it is similar to the method used by<route> and is used for accessing data without rendering a route
 1. How would you explain form validation to someone who has never programmed before?
-
+making sure that users correcrly enter information into field on a form. for instances cases or numbers or symbols needed in a pasword
 1. In 1-2 sentences, define end to end testing.
+ened to end testing is testing a page or product through the lifecycle, or testing all elements of an app in ways the app will be used whwn active. 
 
 ## Instructions
 
@@ -96,8 +97,8 @@ After finishing your required elements, you can push your work further. These go
 - [ ] Toggle form component for gluten free crust
 - [ ] Turn form element sections into nested routes
 - [ ] Test more of the application with Cypress
-- [ ] Build UI for the eventuality of a network error when POSTing the order
-- [ ] Add functionality to your order button that it leads to a Congrats! Pizza is on it's way! page **and** returns a database record of the whole order
+- [ ] Build UI for the eventuality of a network error when POSTingCongrats! Pizza is on it's way! the order
+- [ ] Add functionality to your order button that it leads to a  page **and** returns a database record of the whole order
 
 ## FAQs
 
