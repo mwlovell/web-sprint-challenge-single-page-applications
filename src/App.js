@@ -10,7 +10,7 @@ import PizzaForm from './Components/pizzaForm'
 import axios from 'axios';
 import * as yup from 'yup';
 import schema from './Validation/formSchema';
-import {  Route } from 'react-router-dom'
+import {  Route, BrowserRouter } from 'react-router-dom'
 // import { Home } from './components/pizza'
 
 //////////////// INITIAL STATES ////////////////
@@ -76,7 +76,7 @@ export default function App() {
     // 🔥 STEP 6- IMPLEMENT! ON SUCCESS ADD NEWLY CREATED FRIEND TO STATE
     //    helper to [POST] `newFriend` to `http://buddies.com/api/friends`
     //    and regardless of success or failure, the form should reset
-    axios.post('https://reqres.in/api/orders', newPizza)
+    axios.post('https://reqres.in', newPizza)
     .then(res => {
       console.log(res.data)
       setPizzas([res.data, ...pizzas]);
@@ -149,9 +149,25 @@ export default function App() {
  console.log(pizzas)
 
   return (
+<BrowserRouter>
+      {/* <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="blogs" element={<Blogs />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes> */}
+    
+
+
     <div className='container'>
       <header>
-        <h1>Pizza App</h1> </header>
+        <h1>Pizza App</h1> 
+       <Route exact path="/homePage">
+         <button> Start a pie</button>
+         </Route>
+        </header>
         
         
         <Route exact path="/"> 
@@ -198,7 +214,7 @@ export default function App() {
         })
       }
     </div>
+    </BrowserRouter>
   )
 }
-
 
